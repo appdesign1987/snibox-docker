@@ -3,6 +3,8 @@ version: '3'
 services:
   frontend:
     image: snibox/nginx-puma:latest
+    ports:
+      - "8000:80"
     volumes:
       - static-files:/var/www/html
     depends_on:
